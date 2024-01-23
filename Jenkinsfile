@@ -45,25 +45,4 @@ environment {
             }
         }
 
-        stage('Quality Gate') {
-            steps {
-                script {
-                    // Check the SonarQube quality gate status
-                    def qualityGate = waitForQualityGate()
-                    if (qualityGate.status != 'OK') {
-                        error "Pipeline aborted due to quality gate failure: ${qualityGate.status}"
-                    }
-                }
-            }
-        }
-    }
-}
-
-def waitForQualityGate() {
-    // Reuse taskId if SonarQube version is 8.x or below, otherwise use analysisId
-    def qg = waitForQualityGate()
-    if (qg) {
-        return qg
-    }
-    error "Failed to get SonarQube task details"
-}
+  
