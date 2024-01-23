@@ -38,8 +38,8 @@ environment {
                     //docker.image('sonarqube:latest').withRun('-p 9003:9003') { 
                         // Assuming your SonarQube server is running on port 9003
                         sh "mvn clean package sonar:sonar \
-                            -Dsonar.host.url=http://10.10.30.117:9000 \
-                            -Dsonar.login=sqp_662bf263dd46cbdfecfccc38b06a67049748edf9"
+                            sonar.host.url=http://10.10.30.117:9000 \
+                            sonar.login=sqp_662bf263dd46cbdfecfccc38b06a67049748edf9"
                     
                 }
             }
