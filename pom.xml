@@ -167,6 +167,7 @@
             <version>3.10.0.2594</version>
             <configuration>
                 <sonar.host.url>http://10.10.30.117:9000</sonar.host.url>
+                <sonar.login>sqp_662bf263dd46cbdfecfccc38b06a67049748edf9</sonar.login>
                 <!-- Add other configuration as needed -->
             </configuration>
         </plugin>
