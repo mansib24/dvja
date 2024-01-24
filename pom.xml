@@ -146,6 +146,7 @@
 
     <build>
         <plugins>
+                 <pluginRepositories> <pluginRepository> <id>maven2</id> <url>https://repo.maven.apache.org/maven2/</url> </pluginRepository> </pluginRepositories>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.10.1</version>
