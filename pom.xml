@@ -160,6 +160,15 @@
              <artifactId>maven-war-plugin</artifactId>
              <version>3.2.3</version>
          </plugin>
+                  <plugin>
+            <groupId>org.sonarsource.scanner.maven</groupId>
+            <artifactId>sonar-maven-plugin</artifactId>
+            <version>3.10.0.2594</version>
+            <configuration>
+                <sonar.host.url>http://10.10.30.117:9000</sonar.host.url>
+                <!-- Add other configuration as needed -->
+            </configuration>
+        </plugin>
             <plugin>
                 <groupId>org.eclipse.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>
