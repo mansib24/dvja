@@ -158,10 +158,10 @@
                 </configuration>
             </plugin>
             <plugin>
-            '''<groupId>org.sonarsource.scanner.maven</groupId>
+            <!--<groupId>org.sonarsource.scanner.maven</groupId>
             <artifactId>sonar-maven-plugin</artifactId>
             <version>3.9.6</version> <!-- Use the latest version -->
-            </plugin>'''
+            </plugin>-->
             <plugin>
                 <groupId>org.eclipse.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>
@@ -183,7 +183,7 @@
                 </configuration>
             </plugin>
             
-                 <plugin>
+           <plugin>
     <groupId>org.sonarsource.scanner.maven</groupId>
     <artifactId>sonar-maven-plugin</artifactId>
     <version>3.9.6</version> <!-- Use the latest version -->
