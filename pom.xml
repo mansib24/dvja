@@ -157,8 +157,8 @@
                     <target>1.7</target>
                 </configuration>
             </plugin>
-            <plugin>
-            <!--<groupId>org.sonarsource.scanner.maven</groupId>
+           <!-- <plugin>
+            <groupId>org.sonarsource.scanner.maven</groupId>
             <artifactId>sonar-maven-plugin</artifactId>
             <version>3.9.6</version> <!-- Use the latest version -->
             </plugin>-->
