@@ -150,7 +150,7 @@
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.9.6</version>
+                <version>3.3</version>
                 <configuration>
                     <encoding>UTF-8</encoding>
                     <source>1.7</source>
@@ -158,10 +158,10 @@
                 </configuration>
             </plugin>
             <plugin>
-            <groupId>org.sonarsource.scanner.maven</groupId>
+            '''<groupId>org.sonarsource.scanner.maven</groupId>
             <artifactId>sonar-maven-plugin</artifactId>
             <version>3.9.6</version> <!-- Use the latest version -->
-            </plugin>
+            </plugin>'''
             <plugin>
                 <groupId>org.eclipse.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>
@@ -182,6 +182,19 @@
                     </webAppConfig>
                 </configuration>
             </plugin>
+            
+                 <plugin>
+    <groupId>org.sonarsource.scanner.maven</groupId>
+    <artifactId>sonar-maven-plugin</artifactId>
+    <version>3.9.6</version> <!-- Use the latest version -->
+    <configuration>
+        <sonar.host.url>http://10.10.30.117:9000/</sonar.host.url>
+        <sonar.login>Admin</sonar.login> <!-- Optional, if authentication is required -->
+        <sonar.password>Hello@123</sonar.password> <!-- Optional, if authentication is required -->
+        <sonar.projectKey>sqp_662bf263dd46cbdfecfccc38b06a67049748edf9</sonar.projectKey>
+        <sonar.projectName>appsec</sonar.projectName>
+    </configuration>
+         </plugin>         
         </plugins>
     </build>
 </project>
