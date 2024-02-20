@@ -31,19 +31,13 @@ environment {
         sh 'cat trufflehog'
       }
     }
-       stage('SonarQube Analysis') {
-            steps {
-                script {
-                    // Run SonarQube analysis
-                    //docker.image('sonarqube:latest').withRun('-p 9003:9003') { 
-                        // Assuming your SonarQube server is running on port 9003
-                        sh "mvn clean sonar:sonar \
-                            sonar.host.url=http://10.10.30.117:9000 \
-                            sonar.login=sqp_662bf263dd46cbdfecfccc38b06a67049748edf9"
-                    
-                }
-            }
-        }
+       
+        stage('SonarQube analysis') {
+            steps{
+    withSonarQubeEnv(installationName: 'SonarQube') { // You can override the credential to be used
+      sh 'mvn clean install sonar:sonar'
+    }
+  }
 
   
     }
